@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prancing-pony-manager"
+version = "1.1.0"
+description = "Prancing Pony Manager: a cozy fantasy tavern-management game for the terminal."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["game", "terminal", "tavern", "management", "fantasy"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Simulation",
+]
+
+[project.scripts]
+prancing-pony = "cli_main:main"
+prancing-pony-manager = "cli_main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["models", "events", "game", "persistence", "terminal_ui", "cli_main"]
